@@ -56,6 +56,7 @@ const ProductDetail = ({ productId }) => {
         quantity: counter,
       })
     );
+    setCounter(0)
   };
 
   useEffect(() => {
@@ -66,18 +67,18 @@ const ProductDetail = ({ productId }) => {
   }, [productId]);
   return (
     <section className="w-full max-w-[1200px] m-auto">
-      <section className="flex gap-3 items-center my-[30px]">
+      <section className="flex gap-3 items-center">
         <Link to="/">Home</Link>
         <div className="h-[7px] aspect-square bg-red-500 rounded-full"></div>
         <span className="text-gray-700 font-semibold">
           {productData?.title}
         </span>
       </section>
-      <section className="grid gap-10 sm:grid-cols-2 max-w-[1024] mx-auto">
-        <section className="p-4 relative overflow-hidden">
+      <section className="grid gap-10 sm:grid-cols-2 max-w-[1024px] mx-auto">
+        <section className="relative overflow-hidden min-h-[300px]">
           <section className={`flex w-[300%] top-[50%] translate-y-[-50%] transition-opacity absolute ${positionImage[position]}`}>
             <div
-              className="h-[300px] w-[calc(100%_/_3)] p-3"
+              className="h-[300px] w-[calc(100%_/_3)] p-8 flex justify-center items-center"
             >
               <img
                 className="max-h-[300px] w-full object-contain"
@@ -86,7 +87,7 @@ const ProductDetail = ({ productId }) => {
               />
             </div>
             <div
-              className="h-[300px] w-[calc(100%_/_3)] p-3"
+              className="h-[300px] w-[calc(100%_/_3)] p-8 flex justify-center items-center"
             >
               <img
                 className="max-h-[300px] w-full object-contain"
@@ -95,7 +96,7 @@ const ProductDetail = ({ productId }) => {
               />
             </div>
             <div
-              className="h-[300px] w-[calc(100%_/_3)] p-3"
+              className="h-[300px] w-[calc(100%_/_3)] p-8 flex justify-center items-center"
             >
               <img
                 className="max-h-[300px] w-full object-contain"
@@ -118,20 +119,20 @@ const ProductDetail = ({ productId }) => {
           </button>
         </section>
         <section className="grid gap-4 p-8">
-          <h4 className="text-lg text-gray-300">{productData?.brand}</h4>
+          <h4 className="text-lg text-gray-400">{productData?.brand}</h4>
           <h2 className="pl-4 capitalize font-semibold text-gray-600 text-2xl">
             {productData?.title}
           </h2>
           <p className="text-justify">{productData?.description}</p>
           <section className="grid grid-cols-2">
             <article>
-              <h4 className="text-gray-300">Price</h4>
+              <h4 className="text-gray-400">Price</h4>
               <span className="pl-4 font-semibold text-gray-600 text-xl">
                 $ {productData?.price}
               </span>
             </article>
             <article>
-              <h4 className="text-gray-300">Quantity</h4>
+              <h4 className="text-gray-400">Quantity</h4>
               <div className="flex">
                 <button
                   className="w-[30px] aspect-square border-[1px] border-gray-300 "

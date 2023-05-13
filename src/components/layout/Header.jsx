@@ -6,6 +6,8 @@ import { changeIsShowCart } from "../../store/slices/cart.slice";
 const Header = () => {
   const dispatch = useDispatch();
   const { token } = useSelector((store) => store.userInfo);
+
+  const { products } = useSelector( (store) => store.cart)
   const navigate = useNavigate();
   const handleClickShowCart = () => {
     if (!token) {
@@ -28,8 +30,10 @@ const Header = () => {
           <Link to="/purchases" className="text-center bg-white w-[100px]">
             <i className="bx bx-box"></i>
           </Link>
-          <button onClick={handleClickShowCart} className="text-center bg-white w-[100px]">
+          <button onClick={handleClickShowCart} className="text-center bg-white w-[100px] relative">
             <i className="bx bx-cart"></i>
+            <span className="absolute aspect-square w-[25px] left-[20%] bottom-0
+             text-white bg-red-600 rounded-full text-base flex justify-center items-center">{products.length}</span>
           </button>
         </div>
       </nav>
