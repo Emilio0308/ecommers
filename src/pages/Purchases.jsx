@@ -22,7 +22,7 @@ const Purchases = () => {
   }, []);
 
   return (
-    <main className="px-2 max-w-[1024px] mx-auto w-full">
+    <main className="px-2 max-w-[1024px] mx-auto w-full pt-[115px] sm:pt-[70px]">
       <section className="flex gap-2 items-center my-2">
         <Link to="/">Home</Link>
         <div className="h-[7px] aspect-square bg-red-500 rounded-full"></div>

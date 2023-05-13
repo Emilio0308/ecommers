@@ -6,7 +6,7 @@ const Products = () => {
   const {id} = useParams()
   
   return (
-    <main className='p-3 w-full'>
+    <main className='p-3 w-full pt-[115px] sm:pt-[70px]'>
       <ProductDetail productId={id}/>
     </main>
   )

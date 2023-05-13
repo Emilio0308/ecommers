@@ -21,7 +21,7 @@ const Login = () => {
   }
 
   return (
-    <main className="bg-gray-200 flex justify-center items-center px-3 w-screen">
+    <main className="bg-gray-200 flex justify-center items-center px-3 w-screen pt-[115px] sm:pt-[70px] min-h-screen">
       {token ? (
         <article className="w-full max-w-[400px] flex flex-col justify-center items-center p-3 text-center bg-white/80 rounded-md">
           <div className="h-[90px] w-[90px]">

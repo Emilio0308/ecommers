@@ -8,6 +8,8 @@ const Header = () => {
   const { token } = useSelector((store) => store.userInfo);
 
   const { products } = useSelector( (store) => store.cart)
+  const totalOfProducts = products.reduce( (acc , curr) => (curr.quantity)+ acc , 0)
+
   const navigate = useNavigate();
   const handleClickShowCart = () => {
     if (!token) {
@@ -17,7 +19,7 @@ const Header = () => {
     }
   };
   return (
-    <section className="w-full border-b-[1px] border-gray-300">
+    <section className="w-full border-b-[1px] border-gray-300 h-[115px] sm:h-[70px] fixed bg-white z-20 shadow-md shadow-black/10">
       <nav className="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-[auto,_1fr] p-3 w-full max-w-[1200px] m-auto ">
         <Link to="/">
           <h1 className="text-4xl text-red-600 tracking-widest">E-commers</h1>
@@ -33,7 +35,9 @@ const Header = () => {
           <button onClick={handleClickShowCart} className="text-center bg-white w-[100px] relative">
             <i className="bx bx-cart"></i>
             <span className="absolute aspect-square w-[25px] left-[20%] bottom-0
-             text-white bg-red-600 rounded-full text-base flex justify-center items-center">{products.length}</span>
+             text-white bg-red-600 rounded-full text-base flex justify-center items-center">
+              {totalOfProducts == 0 ? "+" : totalOfProducts }
+            </span>
           </button>
         </div>
       </nav>

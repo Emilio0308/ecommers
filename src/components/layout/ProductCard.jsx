@@ -17,7 +17,7 @@ const ProductCard = ( { product } ) => {
     }
     
   return (
-    <Link to={`/products/${product.id}`} className='border-[1px] border-gray-300 rounded-md grid'>
+    <Link to={`/products/${product.id}`} className='border-[1px] border-gray-300 rounded-md grid shadow-md shadow-slate-800/30'>
         <div className='p-4 border-b-[1px] border-gray-300 h-[200px] flex justify-center items-center relative group'>
             <img className='w-full h-full object-contain group-hover:opacity-0 transition-opacity' src={product.images[0].url} alt="" />
             <img className='w-full h-full object-contain opacity-0 absolute hover:opacity-100 transition-opacity' src={product.images[1].url} alt="" />

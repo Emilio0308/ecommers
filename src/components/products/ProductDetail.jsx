@@ -56,7 +56,7 @@ const ProductDetail = ({ productId }) => {
         quantity: counter,
       })
     );
-    setCounter(0)
+    setCounter(1)
   };
 
   useEffect(() => {
@@ -66,7 +66,7 @@ const ProductDetail = ({ productId }) => {
       .catch((err) => console.log(err));
   }, [productId]);
   return (
-    <section className="w-full max-w-[1200px] m-auto">
+    <section className="w-full max-w-[1200px] m-auto pt-[40px]">
       <section className="flex gap-3 items-center">
         <Link to="/">Home</Link>
         <div className="h-[7px] aspect-square bg-red-500 rounded-full"></div>

@@ -29,10 +29,10 @@ const Cart = () => {
   
   return (
     <section
-      className={`fixed bg-white h-screen w-[270px] p-3 sm:w-[320px]
+      className={`fixed bg-white h-screen w-[270px] p-3 sm:w-[320px] top-[115px] sm:top-[70px]
       shadow-xl ${isShowCart && token ? "right-0" : "right-[-100%]"} duration-200 grid grid-rows-[auto,_1fr,_auto]`}
     >
-      <h2>Shopping Cart</h2>
+      <h2 className="text-red-600 font-medium text-xl tracking-[3px]">Shopping Cart</h2>
       <i onClick={handleClose} className='bx bx-x absolute top-2 right-3 text-xl cursor-pointer'></i>
       {/* losproductos */}
       <section className="overflow-y-auto grid gap-3 py-4 content-start">
