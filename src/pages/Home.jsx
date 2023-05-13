@@ -59,7 +59,7 @@ const Home = () => {
   
 
   return (
-    <main className='p-3 pt-[70px] Home grid grid-rows-[auto,:1fr] w-full sm:grid-rows-1 sm:grid-cols-[auto,_1fr] max-w-[1200px] m-auto'>
+    <main className='p-3 pt-[115px] sm:pt-[70px] Home grid grid-rows-[auto,:1fr] w-full sm:grid-rows-1 sm:grid-cols-[auto,_1fr] max-w-[1200px] m-auto'>
       <form onSubmit={hanldeSubmit} className='py-6 px-2'>
         <div>
           <input className='outline-none border-b border-gray-300'
